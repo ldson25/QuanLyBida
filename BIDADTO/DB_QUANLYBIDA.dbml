@@ -1,0 +1,205 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="DB_QUANLYBIDA" Class="DB_QUANLYBIDADataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=LAPTOP-NQQ9TLI2;Initial Catalog=DB_QUANLYBIDA;Integrated Security=True;Encrypt=True;Trust Server Certificate=True" SettingsObjectName="BIDADTO.Properties.Settings" SettingsPropertyName="DB_QUANLYBIDAConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.ACCOUNT" Member="ACCOUNTs">
+    <Type Name="ACCOUNT">
+      <Column Name="USERNAME" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="DISPLAYNAME" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="PASSWORD" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="TYPE" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="EMPLOYEEID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="EMPLOYEE_ACCOUNT" Member="EMPLOYEE" ThisKey="EMPLOYEEID" OtherKey="EMPLOYEEID" Type="EMPLOYEE" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.WORKSCHEDULES" Member="WORKSCHEDULEs">
+    <Type Name="WORKSCHEDULE">
+      <Column Name="SCHEDULEID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="WORKSHIFT" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="WORKSCHEDULE_ATTENDANCE" Member="ATTENDANCEs" ThisKey="SCHEDULEID" OtherKey="SCHEDULEID" Type="ATTENDANCE" />
+      <Association Name="WORKSCHEDULE_EMPLOYEE" Member="EMPLOYEEs" ThisKey="SCHEDULEID" OtherKey="SCHEDULEID" Type="EMPLOYEE" />
+      <Association Name="WORKSCHEDULE_SCHEDULE_CHANGE" Member="SCHEDULE_CHANGEs" ThisKey="SCHEDULEID" OtherKey="NEW_SCHEDULEID" Type="SCHEDULE_CHANGE" />
+      <Association Name="WORKSCHEDULE_SCHEDULE_CHANGE1" Member="SCHEDULE_CHANGEs1" ThisKey="SCHEDULEID" OtherKey="OLD_SCHEDULEID" Type="SCHEDULE_CHANGE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ATTENDANCES" Member="ATTENDANCEs">
+    <Type Name="ATTENDANCE">
+      <Column Name="ATTENDANCEID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="EMPLOYEEID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="WORKDATE" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="WORKSHIFT" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="SCHEDULEID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="WORKSCHEDULE_ATTENDANCE" Member="WORKSCHEDULE" ThisKey="SCHEDULEID" OtherKey="SCHEDULEID" Type="WORKSCHEDULE" IsForeignKey="true" />
+      <Association Name="EMPLOYEE_ATTENDANCE" Member="EMPLOYEE" ThisKey="EMPLOYEEID" OtherKey="EMPLOYEEID" Type="EMPLOYEE" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.BILL" Member="BILLs">
+    <Type Name="BILL">
+      <Column Name="IDBILL" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DATECHECKIN" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DATECHECKOUT" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IDTABLE" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="STATUS" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TABLEFEE" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="FOODFEE" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="DISCOUNT" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="SURCHARGE" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="TOTALAMOUNT" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="TOTALPRICE" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="EMPLOYEEID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IDPROMOTION" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="BILL_BILLINFO" Member="BILLINFOs" ThisKey="IDBILL" OtherKey="IDBILL" Type="BILLINFO" />
+      <Association Name="EMPLOYEE_BILL" Member="EMPLOYEE" ThisKey="EMPLOYEEID" OtherKey="EMPLOYEEID" Type="EMPLOYEE" IsForeignKey="true" />
+      <Association Name="TABLEFOOD_BILL" Member="TABLEFOOD" ThisKey="IDTABLE" OtherKey="IDTABLE" Type="TABLEFOOD" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.BILLIARD_TABLE_TYPE" Member="BILLIARD_TABLE_TYPEs">
+    <Type Name="BILLIARD_TABLE_TYPE">
+      <Column Name="IDTYPE" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TYPENAME" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PRICE_PER_HOUR" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Association Name="BILLIARD_TABLE_TYPE_TABLEFOOD" Member="TABLEFOODs" ThisKey="IDTYPE" OtherKey="IDTYPE" Type="TABLEFOOD" />
+    </Type>
+  </Table>
+  <Table Name="dbo.BILLINFO" Member="BILLINFOs">
+    <Type Name="BILLINFO">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IDBILL" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IDFOOD" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="COUNT" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="BILL_BILLINFO" Member="BILL" ThisKey="IDBILL" OtherKey="IDBILL" Type="BILL" IsForeignKey="true" />
+      <Association Name="FOOD_BILLINFO" Member="FOOD" ThisKey="IDFOOD" OtherKey="IDFOOD" Type="FOOD" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.EMPLOYEES" Member="EMPLOYEEs">
+    <Type Name="EMPLOYEE">
+      <Column Name="EMPLOYEEID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FULLNAME" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="GENDER" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="PHONE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="EMAIL" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="IMAGES" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="POSITIONID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SCHEDULEID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="COEFFICIENTSSALARY" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="NUMBEROFDAYSOFFOFANEMPLOYEE" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="YEAR_STARTED" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="IDENTIFICATION" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="ISSUING_AUTHORITY" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Association Name="EMPLOYEE_ACCOUNT" Member="ACCOUNT" ThisKey="EMPLOYEEID" OtherKey="EMPLOYEEID" Type="ACCOUNT" Cardinality="One" />
+      <Association Name="EMPLOYEE_ATTENDANCE" Member="ATTENDANCEs" ThisKey="EMPLOYEEID" OtherKey="EMPLOYEEID" Type="ATTENDANCE" />
+      <Association Name="EMPLOYEE_BILL" Member="BILLs" ThisKey="EMPLOYEEID" OtherKey="EMPLOYEEID" Type="BILL" />
+      <Association Name="EMPLOYEE_PAYROLL" Member="PAYROLLs" ThisKey="EMPLOYEEID" OtherKey="EMPLOYEEID" Type="PAYROLL" />
+      <Association Name="EMPLOYEE_SCHEDULE_CHANGE" Member="SCHEDULE_CHANGEs" ThisKey="EMPLOYEEID" OtherKey="APPROVED_BY" Type="SCHEDULE_CHANGE" />
+      <Association Name="EMPLOYEE_SCHEDULE_CHANGE1" Member="SCHEDULE_CHANGEs1" ThisKey="EMPLOYEEID" OtherKey="EMPLOYEEID" Type="SCHEDULE_CHANGE" />
+      <Association Name="WORKSCHEDULE_EMPLOYEE" Member="WORKSCHEDULE" ThisKey="SCHEDULEID" OtherKey="SCHEDULEID" Type="WORKSCHEDULE" IsForeignKey="true" />
+      <Association Name="POSITION_EMPLOYEE" Member="POSITION" ThisKey="POSITIONID" OtherKey="POSITIONID" Type="POSITION" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FOOD" Member="FOODs">
+    <Type Name="FOOD">
+      <Column Name="IDFOOD" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NAME" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="IDCATEGORY" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PRICE" Type="System.Decimal" DbType="Decimal(18,2) NOT NULL" CanBeNull="false" />
+      <Column Name="IMAGES" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="INVENTORY" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="UNIT" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="FOOD_BILLINFO" Member="BILLINFOs" ThisKey="IDFOOD" OtherKey="IDFOOD" Type="BILLINFO" />
+      <Association Name="FOOD_IMPORT_INFO" Member="IMPORT_INFOs" ThisKey="IDFOOD" OtherKey="ID_FOOD" Type="IMPORT_INFO" />
+      <Association Name="FOODCATEGORY_FOOD" Member="FOODCATEGORY" ThisKey="IDCATEGORY" OtherKey="IDCATEGORY" Type="FOODCATEGORY" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FOODCATEGORY" Member="FOODCATEGORies">
+    <Type Name="FOODCATEGORY">
+      <Column Name="IDCATEGORY" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NAME" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Association Name="FOODCATEGORY_FOOD" Member="FOODs" ThisKey="IDCATEGORY" OtherKey="IDCATEGORY" Type="FOOD" />
+    </Type>
+  </Table>
+  <Table Name="dbo.IMPORT_BILL" Member="IMPORT_BILLs">
+    <Type Name="IMPORT_BILL">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DATE_IMPORT" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="TOTAL_PRICE" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="NOTE" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Association Name="IMPORT_BILL_IMPORT_INFO" Member="IMPORT_INFOs" ThisKey="ID" OtherKey="ID_BILL" Type="IMPORT_INFO" />
+    </Type>
+  </Table>
+  <Table Name="dbo.IMPORT_INFO" Member="IMPORT_INFOs">
+    <Type Name="IMPORT_INFO">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ID_BILL" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ID_FOOD" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="QUANTITY" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="INPUT_PRICE" Type="System.Decimal" DbType="Decimal(18,2) NOT NULL" CanBeNull="false" />
+      <Association Name="IMPORT_BILL_IMPORT_INFO" Member="IMPORT_BILL" ThisKey="ID_BILL" OtherKey="ID" Type="IMPORT_BILL" IsForeignKey="true" />
+      <Association Name="FOOD_IMPORT_INFO" Member="FOOD" ThisKey="ID_FOOD" OtherKey="IDFOOD" Type="FOOD" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PAYROLL" Member="PAYROLLs">
+    <Type Name="PAYROLL">
+      <Column Name="PAYROLLID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="EMPLOYEEID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CONTRACTID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PAYMENTDATE" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="HOURS_WORKED" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="TOTAL_SALARY" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Association Name="EMPLOYEE_PAYROLL" Member="EMPLOYEE" ThisKey="EMPLOYEEID" OtherKey="EMPLOYEEID" Type="EMPLOYEE" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.POSITIONS" Member="POSITIONs">
+    <Type Name="POSITION">
+      <Column Name="POSITIONID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="POSITIONNAME" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="POSITION_EMPLOYEE" Member="EMPLOYEEs" ThisKey="POSITIONID" OtherKey="POSITIONID" Type="EMPLOYEE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PROMOTION" Member="PROMOTIONs">
+    <Type Name="PROMOTION">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NAME" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="TYPE" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="VALUE" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="STATUS" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="APPLY_FOR_FOOD_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="REQUIRED_QTY" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SCHEDULE_CHANGES" Member="SCHEDULE_CHANGEs">
+    <Type Name="SCHEDULE_CHANGE">
+      <Column Name="CHANGE_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="EMPLOYEEID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="OLD_SCHEDULEID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NEW_SCHEDULEID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CHANGE_DATE" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="STATUS" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="REASON" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="REQUESTED_AT" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="APPROVED_BY" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="APPROVED_AT" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="EMPLOYEE_SCHEDULE_CHANGE" Member="EMPLOYEE" ThisKey="APPROVED_BY" OtherKey="EMPLOYEEID" Type="EMPLOYEE" IsForeignKey="true" />
+      <Association Name="EMPLOYEE_SCHEDULE_CHANGE1" Member="EMPLOYEE1" ThisKey="EMPLOYEEID" OtherKey="EMPLOYEEID" Type="EMPLOYEE" IsForeignKey="true" />
+      <Association Name="WORKSCHEDULE_SCHEDULE_CHANGE" Member="WORKSCHEDULE" ThisKey="NEW_SCHEDULEID" OtherKey="SCHEDULEID" Type="WORKSCHEDULE" IsForeignKey="true" />
+      <Association Name="WORKSCHEDULE_SCHEDULE_CHANGE1" Member="WORKSCHEDULE1" ThisKey="OLD_SCHEDULEID" OtherKey="SCHEDULEID" Type="WORKSCHEDULE" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SHOPOWNERS" Member="SHOPOWNERs">
+    <Type Name="SHOPOWNER">
+      <Column Name="OWNERID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FULLNAME" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="CONTACTINFO" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="EMAIL" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TABLEFOOD" Member="TABLEFOODs">
+    <Type Name="TABLEFOOD">
+      <Column Name="IDTABLE" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NAME" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="STATUS" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="IDTYPE" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="STARTTIME" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="PLAYTIME" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="TABLEFOOD_BILL" Member="BILLs" ThisKey="IDTABLE" OtherKey="IDTABLE" Type="BILL" />
+      <Association Name="BILLIARD_TABLE_TYPE_TABLEFOOD" Member="BILLIARD_TABLE_TYPE" ThisKey="IDTYPE" OtherKey="IDTYPE" Type="BILLIARD_TABLE_TYPE" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

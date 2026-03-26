@@ -1,0 +1,361 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EF867366-757A-4A70-9C36-775A32E6D0C9}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>QuanLyBida</RootNamespace>
+    <AssemblyName>QuanLyBida</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="fLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fLogin.Designer.cs">
+      <DependentUpon>fLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEmployee.Designer.cs">
+      <DependentUpon>FrmEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmFood.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmFood.Designer.cs">
+      <DependentUpon>FrmFood.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmImport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmImport.Designer.cs">
+      <DependentUpon>FrmImport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmKiemKe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmKiemKe.Designer.cs">
+      <DependentUpon>FrmKiemKe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMain.Designer.cs">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmOrder.Designer.cs">
+      <DependentUpon>FrmOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPay.Designer.cs">
+      <DependentUpon>FrmPay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPromotion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPromotion.Designer.cs">
+      <DependentUpon>FrmPromotion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmReportViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmReportViewer.Designer.cs">
+      <DependentUpon>FrmReportViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmRevenue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRevenue.Designer.cs">
+      <DependentUpon>FrmRevenue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSettings.Designer.cs">
+      <DependentUpon>FrmSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmSwitchTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSwitchTable.Designer.cs">
+      <DependentUpon>FrmSwitchTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NumericUpDownColumn.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RptDoanhThu.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RptDoanhThu.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RptHoaDon.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RptHoaDon.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SecurityHelper.cs" />
+    <Compile Include="UCTable.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCTable.Designer.cs">
+      <DependentUpon>UCTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_FoodItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_FoodItem.Designer.cs">
+      <DependentUpon>UC_FoodItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_LoiVao.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_LoiVao.Designer.cs">
+      <DependentUpon>UC_LoiVao.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="fLogin.resx">
+      <DependentUpon>fLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmEmployee.resx">
+      <DependentUpon>FrmEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmFood.resx">
+      <DependentUpon>FrmFood.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMain.resx">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmOrder.resx">
+      <DependentUpon>FrmOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPay.resx">
+      <DependentUpon>FrmPay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPromotion.resx">
+      <DependentUpon>FrmPromotion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmReportViewer.resx">
+      <DependentUpon>FrmReportViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRevenue.resx">
+      <DependentUpon>FrmRevenue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSwitchTable.resx">
+      <DependentUpon>FrmSwitchTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="RptDoanhThu.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RptDoanhThu.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RptHoaDon.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RptHoaDon.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCTable.resx">
+      <DependentUpon>UCTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_FoodItem.resx">
+      <DependentUpon>UC_FoodItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_LoiVao.resx">
+      <DependentUpon>UC_LoiVao.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngtree-avatar-icon-profile-icon-member-login-vector-isolated-png-image_1978396.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mo-hinh-quan-cafe-ket-hop-bida.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ten-quan-bida-hay.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-add-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ChatGPT Image 15_41_24 21 thg 11, 2025.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ttt.png" />
+    <None Include="Resources\Bida.jpg" />
+    <None Include="Resources\6bd7c02f-001c-475e-ad32-e4b076fbfdf1.jpg" />
+    <None Include="Resources\6bd7c02f-001c-475e-ad32-e4b076fbfdf11.jpg" />
+    <None Include="Resources\6bd7c02f-001c-475e-ad32-e4b076fbfdf12.jpg" />
+    <Content Include="Resources\image\Americano.jpg" />
+    <Content Include="Resources\image\BacXiuDa.jpg" />
+    <Content Include="Resources\image\Bia333.jpg" />
+    <Content Include="Resources\image\BiaHaNoi.jpg" />
+    <Content Include="Resources\image\BiaHeineken.jpg" />
+    <Content Include="Resources\image\BiaSaiGon.jpg" />
+    <Content Include="Resources\image\BiaTiger.jpg" />
+    <Content Include="Resources\image\Cappuccino.jpg" />
+    <Content Include="Resources\image\CocaCola.jpg" />
+    <Content Include="Resources\image\Espresso.jpg" />
+    <Content Include="Resources\image\Fanta.jpg" />
+    <Content Include="Resources\image\Iphone 14 Promax.jpg" />
+    <Content Include="Resources\image\Latte.jpg" />
+    <Content Include="Resources\image\Mirinda.jpg" />
+    <Content Include="Resources\image\Mocha.jpg" />
+    <Content Include="Resources\image\Monster_Energy_Drink.jpg" />
+    <Content Include="Resources\image\NuocCamEp.jpg" />
+    <Content Include="Resources\image\NuocDuaMat.jpg" />
+    <Content Include="Resources\image\NuocEpDua.jpg" />
+    <Content Include="Resources\image\NuocLuuEp.jpg" />
+    <Content Include="Resources\image\NuocMamXoi.jpg" />
+    <Content Include="Resources\image\NuocSuoiAquafina.jpg" />
+    <Content Include="Resources\image\NuocSuoiDasani.jpg" />
+    <Content Include="Resources\image\NuocSuoiIvi.jpg" />
+    <Content Include="Resources\image\NuocSuoiLavie.jpg" />
+    <Content Include="Resources\image\NuocSuoiVinhHao.jpg" />
+    <Content Include="Resources\image\Pepsi.jpg" />
+    <Content Include="Resources\image\RuouRum.jpg" />
+    <Content Include="Resources\image\RuouTequila.jpg" />
+    <Content Include="Resources\image\RuouVang.jpg" />
+    <Content Include="Resources\image\RuouVodka.jpg" />
+    <Content Include="Resources\image\RuouWhiskey.jpg" />
+    <Content Include="Resources\image\SinhToBo.jpg" />
+    <Content Include="Resources\image\SinhToChuoi.jpg" />
+    <Content Include="Resources\image\SinhToDau.jpg" />
+    <Content Include="Resources\image\SinhToDuaHau.jpg" />
+    <Content Include="Resources\image\SinhToXoai.jpg" />
+    <Content Include="Resources\image\SodaCam.jpg" />
+    <Content Include="Resources\image\SodaChanh.jpg" />
+    <Content Include="Resources\image\SodaDuaHau.jpg" />
+    <Content Include="Resources\image\SodaVietQuat.jpg" />
+    <Content Include="Resources\image\SodaXoai.jpg" />
+    <Content Include="Resources\image\Sprite.jpg" />
+    <Content Include="Resources\image\SuaChua.jpg" />
+    <Content Include="Resources\image\SuaDac.jpg" />
+    <Content Include="Resources\image\SuaDauNanh.jpg" />
+    <Content Include="Resources\image\SuaDua.jpg" />
+    <Content Include="Resources\image\SuaTuoi.jpg" />
+    <Content Include="Resources\image\test.jpg" />
+    <Content Include="Resources\image\TraChanh.jpg" />
+    <Content Include="Resources\image\TraDen.jpg" />
+    <Content Include="Resources\image\TraLipton.jpg" />
+    <Content Include="Resources\image\TraOolong.jpg" />
+    <Content Include="Resources\image\TraXanh.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BIDABLL\BIDABLL.csproj">
+      <Project>{208cc4bd-b85e-44a9-aab0-1862a5c579e6}</Project>
+      <Name>BIDABLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BIDADAL\BIDADAL.csproj">
+      <Project>{7823142e-b9d8-4b9c-832d-3e4342174d54}</Project>
+      <Name>BIDADAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BIDADTO\BIDADTO.csproj">
+      <Project>{24fee1c0-4ce6-4002-8faa-01b5dda6511b}</Project>
+      <Name>BIDADTO</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>9</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,234 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 17.25, 14" name="DB_QUANLYBIDA">
+  <DataContextMoniker Name="/DB_QUANLYBIDADataContext" />
+  <nestedChildShapes>
+    <classShape Id="6c787e50-7458-4c4d-9a8a-ed3a497f0e14" absoluteBounds="9.25, 7.625, 2, 1.7708968098958326">
+      <DataClassMoniker Name="/DB_QUANLYBIDADataContext/ACCOUNT" />
+      <nestedChildShapes>
+        <elementListCompartment Id="74b0add3-c23f-4e35-af20-1e5bd3f19660" absoluteBounds="9.265, 8.085, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="db986025-a6d5-4ab4-ae76-7132236c8182" absoluteBounds="0.75, 9.25, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/DB_QUANLYBIDADataContext/WORKSCHEDULE" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8194c311-9936-4f4c-9b25-19a443240a4d" absoluteBounds="0.765, 9.71, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="89da5f12-c016-4546-b07a-9b7342390f6e" absoluteBounds="3.5, 9, 2, 1.7708968098958326">
+      <DataClassMoniker Name="/DB_QUANLYBIDADataContext/ATTENDANCE" />
+      <nestedChildShapes>
+        <elementListCompartment Id="bafdb2b9-07ce-4e60-91b0-12c0dd341a9d" absoluteBounds="3.515, 9.46, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="fe50ca32-dca3-4c10-a93b-0b33e75ab58a" absoluteBounds="12.25, 4.125, 2, 3.3093082682291666">
+      <DataClassMoniker Name="/DB_QUANLYBIDADataContext/BILL" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9f847b6e-4e0c-40f8-b64f-919f31c92cc4" absoluteBounds="12.265, 4.585, 1.9700000000000002, 2.7493082682291665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="af42b242-7863-46ed-bd8c-3b8bba0ea029" absoluteBounds="6.75, 5.125, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/DB_QUANLYBIDADataContext/BILLIARD_TABLE_TYPE" />
+      <nestedChildShapes>
+        <elementListCompartment Id="67d24bba-2a33-40a4-b3d9-345d32865bcc" absoluteBounds="6.765, 5.585, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4bbc6c66-c7b0-4c62-8a4a-0211625b2d9b" absoluteBounds="15, 5, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/DB_QUANLYBIDADataContext/BILLINFO" />
+      <nestedChildShapes>
+        <elementListCompartment Id="128e89b0-82db-4355-9eb5-6547bc58ba5e" absoluteBounds="15.015, 5.46, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="05404913-f3c2-48ba-b400-13d0733e9bfb" absoluteBounds="6.5, 8.125, 2, 3.3093082682291666">
+      <DataClassMoniker Name="/DB_QUANLYBIDADataContext/EMPLOYEE" />
+      <nestedChildShapes>
+        <elementListCompartment Id="91796156-0a5c-4a0e-a6b4-706cb9c0ee9d" absoluteBounds="6.515, 8.585, 1.9700000000000002, 2.7493082682291665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="79ba2537-8c18-412a-8d53-df8c5c880521" absoluteBounds="12.25, 0.75, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/DB_QUANLYBIDADataContext/FOOD" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b5dd343a-888f-4ce0-8cd1-9ae95a6654e2" absoluteBounds="12.265, 1.21, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="3be77041-5d56-415b-912e-e3c2bed6b48e" absoluteBounds="9.5, 2.75, 2, 1.1939925130208335">
+      <DataClassMoniker Name="/DB_QUANLYBIDADataContext/FOODCATEGORY" />
+      <nestedChildShapes>
+        <elementListCompartment Id="bbb7cc36-393a-4a5f-82b6-fe27a6b5d74a" absoluteBounds="9.515, 3.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="535c137b-ff03-43ba-85e7-b227d64f6296" absoluteBounds="12.25, 12.125, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/DB_QUANLYBIDADataContext/IMPORT_BILL" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3b498551-89a3-43de-9b87-e3a5e8a85236" absoluteBounds="12.265, 12.585, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="73c94a55-72a3-4a3c-8e2d-7db7c16474ed" absoluteBounds="15, 1, 2, 1.7708968098958329">
+      <DataClassMoniker Name="/DB_QUANLYBIDADataContext/IMPORT_INFO" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7fa84547-3753-4891-9b17-3ab55bccee1d" absoluteBounds="15.015, 1.46, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b2db0a62-1d2b-4173-9b24-ed185d95070a" absoluteBounds="9.25, 10.125, 2, 1.9631982421874987">
+      <DataClassMoniker Name="/DB_QUANLYBIDADataContext/PAYROLL" />
+      <nestedChildShapes>
+        <elementListCompartment Id="dcf0127f-cffb-4553-9be1-463c23f6312c" absoluteBounds="9.265, 10.585, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="dfe981fb-11eb-437e-84ae-aaee8ffee521" absoluteBounds="3.75, 6.25, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/DB_QUANLYBIDADataContext/POSITION" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7559201b-2faa-40e6-8f27-0f2ab3dadb79" absoluteBounds="3.765, 6.71, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="2e74ebd6-b49d-4a24-9818-a13b8a983461" absoluteBounds="0.75, 1.75, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/DB_QUANLYBIDADataContext/PROMOTION" />
+      <nestedChildShapes>
+        <elementListCompartment Id="180f2b44-438c-43ce-b082-b7fcf67afdac" absoluteBounds="0.765, 2.21, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b9157a95-ad8c-43e8-88ad-3ad3240444ad" absoluteBounds="12.25, 8.5, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/DB_QUANLYBIDADataContext/SCHEDULE_CHANGE" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2624ce34-d326-4c6d-a28e-7d668a06fdd9" absoluteBounds="12.265, 8.96, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="977b211d-8888-4138-b50c-2372db3e2f5a" absoluteBounds="3.125, 1.25, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/DB_QUANLYBIDADataContext/SHOPOWNER" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3c7e8a3e-0e7c-4fe8-a795-47dafaed563d" absoluteBounds="3.14, 1.71, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="68e01c27-d3b0-4449-8e9b-64e3ff59193c" absoluteBounds="9.5, 4.875, 2, 1.9631982421875005">
+      <DataClassMoniker Name="/DB_QUANLYBIDADataContext/TABLEFOOD" />
+      <nestedChildShapes>
+        <elementListCompartment Id="796a084b-eb94-4399-99b5-1e0f55662260" absoluteBounds="9.515, 5.335, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 9.84699625651042); (3.5 : 9.84699625651042)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DB_QUANLYBIDADataContext/WORKSCHEDULE/WORKSCHEDULE_ATTENDANCE" />
+      <nodes>
+        <classShapeMoniker Id="db986025-a6d5-4ab4-ae76-7132236c8182" />
+        <classShapeMoniker Id="89da5f12-c016-4546-b07a-9b7342390f6e" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(14.25 : 5.78929768880208); (14.7291666666667 : 5.78929768880208 : JumpStart); (14.8958333333333 : 5.78929768880208 : JumpEnd); (15 : 5.78929768880208)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DB_QUANLYBIDADataContext/BILL/BILL_BILLINFO" />
+      <nodes>
+        <classShapeMoniker Id="fe50ca32-dca3-4c10-a93b-0b33e75ab58a" />
+        <classShapeMoniker Id="4bbc6c66-c7b0-4c62-8a4a-0211625b2d9b" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.5 : 8.76044840494792); (9.25 : 8.76044840494792)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DB_QUANLYBIDADataContext/EMPLOYEE/EMPLOYEE_ACCOUNT" />
+      <nodes>
+        <classShapeMoniker Id="05404913-f3c2-48ba-b400-13d0733e9bfb" />
+        <classShapeMoniker Id="6c787e50-7458-4c4d-9a8a-ed3a497f0e14" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(6.5 : 9.88544840494792); (6.33333333333333 : 9.88544840494792 : JumpStart); (6.16666666666667 : 9.88544840494792 : JumpEnd); (5.5 : 9.88544840494792)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DB_QUANLYBIDADataContext/EMPLOYEE/EMPLOYEE_ATTENDANCE" />
+      <nodes>
+        <classShapeMoniker Id="05404913-f3c2-48ba-b400-13d0733e9bfb" />
+        <classShapeMoniker Id="89da5f12-c016-4546-b07a-9b7342390f6e" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(6.59375 : 8.125); (6.59375 : 4.46875); (12.25 : 4.46875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DB_QUANLYBIDADataContext/EMPLOYEE/EMPLOYEE_BILL" />
+      <nodes>
+        <classShapeMoniker Id="05404913-f3c2-48ba-b400-13d0733e9bfb" />
+        <classShapeMoniker Id="fe50ca32-dca3-4c10-a93b-0b33e75ab58a" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.75 : 10.4439925130208); (1.75 : 11.1338525390625); (6.5 : 11.1338525390625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DB_QUANLYBIDADataContext/WORKSCHEDULE/WORKSCHEDULE_EMPLOYEE" />
+      <nodes>
+        <classShapeMoniker Id="db986025-a6d5-4ab4-ae76-7132236c8182" />
+        <classShapeMoniker Id="05404913-f3c2-48ba-b400-13d0733e9bfb" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(14.25 : 2.90396021294071); (14.625 : 3.2789602129407); (14.625 : 5.36339684440104); (14.7291666666667 : 5.36339684440104 : JumpStart); (14.8958333333333 : 5.36339684440104 : JumpEnd); (15 : 5.36339684440104)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DB_QUANLYBIDADataContext/FOOD/FOOD_BILLINFO" />
+      <nodes>
+        <classShapeMoniker Id="79ba2537-8c18-412a-8d53-df8c5c880521" />
+        <classShapeMoniker Id="4bbc6c66-c7b0-4c62-8a4a-0211625b2d9b" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.5 : 3.42474659375); (13.25 : 3.42474659375); (13.25 : 2.90549967447917)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DB_QUANLYBIDADataContext/FOODCATEGORY/FOODCATEGORY_FOOD" />
+      <nodes>
+        <classShapeMoniker Id="3be77041-5d56-415b-912e-e3c2bed6b48e" />
+        <classShapeMoniker Id="79ba2537-8c18-412a-8d53-df8c5c880521" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(14.25 : 12.1869285109675); (14.8125 : 11.6244285109675); (14.8125 : 1.88544840494792); (15 : 1.88544840494792)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DB_QUANLYBIDADataContext/IMPORT_BILL/IMPORT_BILL_IMPORT_INFO" />
+      <nodes>
+        <classShapeMoniker Id="535c137b-ff03-43ba-85e7-b227d64f6296" />
+        <classShapeMoniker Id="73c94a55-72a3-4a3c-8e2d-7db7c16474ed" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(14.25 : 1.38022420247396); (15 : 1.38022420247396)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DB_QUANLYBIDADataContext/FOOD/FOOD_IMPORT_INFO" />
+      <nodes>
+        <classShapeMoniker Id="79ba2537-8c18-412a-8d53-df8c5c880521" />
+        <classShapeMoniker Id="73c94a55-72a3-4a3c-8e2d-7db7c16474ed" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.5 : 10.7796541341146); (8.91666666666667 : 10.7796541341146 : JumpStart); (9.08333333333333 : 10.7796541341146 : JumpEnd); (9.25 : 10.7796541341146)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DB_QUANLYBIDADataContext/EMPLOYEE/EMPLOYEE_PAYROLL" />
+      <nodes>
+        <classShapeMoniker Id="05404913-f3c2-48ba-b400-13d0733e9bfb" />
+        <classShapeMoniker Id="b2db0a62-1d2b-4173-9b24-ed185d95070a" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.65625 : 7.44399251302083); (5.65625 : 8.53125); (6.5 : 8.53125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DB_QUANLYBIDADataContext/POSITION/POSITION_EMPLOYEE" />
+      <nodes>
+        <classShapeMoniker Id="dfe981fb-11eb-437e-84ae-aaee8ffee521" />
+        <classShapeMoniker Id="05404913-f3c2-48ba-b400-13d0733e9bfb" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.5 : 9.76044840494792); (8.91666666666667 : 9.76044840494792 : JumpStart); (9.08333333333333 : 9.76044840494792 : JumpEnd); (12.25 : 9.76044840494792)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DB_QUANLYBIDADataContext/EMPLOYEE/EMPLOYEE_SCHEDULE_CHANGE" />
+      <nodes>
+        <classShapeMoniker Id="05404913-f3c2-48ba-b400-13d0733e9bfb" />
+        <classShapeMoniker Id="b9157a95-ad8c-43e8-88ad-3ad3240444ad" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.5 : 9.97397420247396); (8.91666666666667 : 9.97397420247396 : JumpStart); (9.08333333333333 : 9.97397420247396 : JumpEnd); (12.25 : 9.97397420247396)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DB_QUANLYBIDADataContext/EMPLOYEE/EMPLOYEE_SCHEDULE_CHANGE1" />
+      <nodes>
+        <classShapeMoniker Id="05404913-f3c2-48ba-b400-13d0733e9bfb" />
+        <classShapeMoniker Id="b9157a95-ad8c-43e8-88ad-3ad3240444ad" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.75 : 9.25); (1.75 : 8.75); (6.25 : 8.75); (6.25 : 11.6843082682292); (9 : 11.6843082682292); (9 : 9.57817010742187); (12.25 : 9.57817010742187)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DB_QUANLYBIDADataContext/WORKSCHEDULE/WORKSCHEDULE_SCHEDULE_CHANGE" />
+      <nodes>
+        <classShapeMoniker Id="db986025-a6d5-4ab4-ae76-7132236c8182" />
+        <classShapeMoniker Id="b9157a95-ad8c-43e8-88ad-3ad3240444ad" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.281252 : 10.4439925130208); (2.281252 : 11.9343082682292); (8.75 : 11.9343082682292); (8.75 : 9.86721130371094); (8.91666666666667 : 9.86721130371094 : JumpStart); (9.08333333333333 : 9.86721130371094 : JumpEnd); (12.25 : 9.86721130371094)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DB_QUANLYBIDADataContext/WORKSCHEDULE/WORKSCHEDULE_SCHEDULE_CHANGE1" />
+      <nodes>
+        <classShapeMoniker Id="db986025-a6d5-4ab4-ae76-7132236c8182" />
+        <classShapeMoniker Id="b9157a95-ad8c-43e8-88ad-3ad3240444ad" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.5 : 5.85659912109375); (12.25 : 5.85659912109375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DB_QUANLYBIDADataContext/TABLEFOOD/TABLEFOOD_BILL" />
+      <nodes>
+        <classShapeMoniker Id="68e01c27-d3b0-4449-8e9b-64e3ff59193c" />
+        <classShapeMoniker Id="fe50ca32-dca3-4c10-a93b-0b33e75ab58a" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.75 : 5.81814697265625); (9.5 : 5.81814697265625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DB_QUANLYBIDADataContext/BILLIARD_TABLE_TYPE/BILLIARD_TABLE_TYPE_TABLEFOOD" />
+      <nodes>
+        <classShapeMoniker Id="af42b242-7863-46ed-bd8c-3b8bba0ea029" />
+        <classShapeMoniker Id="68e01c27-d3b0-4449-8e9b-64e3ff59193c" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
